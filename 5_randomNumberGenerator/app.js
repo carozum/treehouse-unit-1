@@ -20,11 +20,11 @@ let message;
  */
 
 function randomNumber(lowNumber, highNumber){
-  const randomNumber = Math.floor(Math.random() * ( highNumber - lowNumber )) + lowNumber;
-  return randomNumber;
+  return Math.floor(Math.random() * ( highNumber - lowNumber + 1 )) + lowNumber;
 }
 
-if (number1 && number2 && number1!== number2){
+// condition could be if (!isNan(number1) && !isNan(number2))
+if (number1 && number2 && number1 !== number2){
   let highNumber = Math.max(number1, number2);
   let lowNumber = Math.min(number1, number2);
 
@@ -32,7 +32,8 @@ if (number1 && number2 && number1!== number2){
   message = `<h2>The random number between ${lowNumber} and ${highNumber} is ${randomNum}</h2>`;
 
 } else {
-  message = "You need to provide 2 different numbers. Try again ";
+  message = "Both arguments should be numbers";
+  throw Error ("Both arguments should be numbers");
 }
 
 // Display the random number
