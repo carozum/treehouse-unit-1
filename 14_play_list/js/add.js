@@ -8,6 +8,7 @@ const musics = [...brass];
 console.log(musics.shift().shift()); 
 //  "trumpet"
 console.log(musics);
+//[['tuba'], ['trombone'] ]
 
 //  Notice how the brass array is also affected by this:
 console.log(brass);
