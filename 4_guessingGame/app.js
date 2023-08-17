@@ -29,7 +29,7 @@ if ( +guess === number ) {
   }
 }
 
-// Test is guess is correct and output response
+// Test if guess is correct and output response
 if ( correctGuess ) {
   console.log("You guessed the number!");    
 } else {

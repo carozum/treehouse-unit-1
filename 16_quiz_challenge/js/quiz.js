@@ -1,9 +1,21 @@
 
 const questions = [
-  ["How many planets are in the Solar System?", '8'],
-  ["How many continents are there?", '5'],
-  ["How many legs does an insect have?", '4'],
-  ["What year was JS created?", '1995']
+  {
+    question : "How many planets are in the Solar System?",
+    answer : '8' 
+  },
+  {
+    question : "How many continents are there?",
+    answer : '5' 
+  },
+  {
+    question : "How many legs does an insect have?",
+    answer : '4' 
+  },
+  {
+    question : "What year was JS created?",
+    answer : '1995' 
+  }
 ]
 
 let correct = 0;
@@ -21,8 +33,8 @@ function createListItems( arr ) {
 
 
 for (let i =0; i < questions.length; i++){
-  let question = questions[i][0];
-  let answer = questions[i][1];
+  let question = questions[i].question;
+  let answer = questions[i].answer;
   let response = prompt(question);
   if (response === answer){
     correct ++;
